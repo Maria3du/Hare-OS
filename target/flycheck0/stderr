@@ -1,1 +1,10 @@
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 2.10s
+error: failed to run `rustc` to learn about target-specific information
+
+Caused by:
+  process didn't exit successfully: `rustc - --crate-name ___ --print=file-names --target \\?\C:\Users\Cliente\Documents\programação\hare_os\x86_64-hare_os.json -Zunstable-options --crate-type bin --crate-type rlib --crate-type dylib --crate-type cdylib --crate-type staticlib --crate-type proc-macro --print=sysroot --print=split-debuginfo --print=crate-name --print=cfg -Wwarnings` (exit code: 1)
+  --- stderr
+  error: error loading target specification: target feature `soft-float` is incompatible with the ABI but gets enabled in target spec
+    |
+    = help: run `rustc --print target-list` for a list of built-in targets
+    = help: did you mean `x86_64-apple-ios`?
+

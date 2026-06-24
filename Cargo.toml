@@ -1,7 +1,15 @@
 [package]
 name = "hare_os"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
+
+[dependencies]
+bootloader = "0.9.23"
+bootloader_api = "0.11"
+x86_64 = "0.15"
+volatile = "0.2.7"
+spin = "0.10"
+lazy_static = {version = "1.4", features = ["spin_no_std"]}
 
 [profile.dev]
 panic = "abort"
@@ -11,11 +19,14 @@ panic = "abort"
 
 [[bin]]
 name = "hare_os"
-test = false
+test = true
 bench = false
 
-[dependencies]
-bootloader = "0.9"
-volatile ="0.2.6"
-spin = "0.9"
-lazy_static = {version = "1.4", features = ["spin_no_std"]}
+[package.metadata.bootimage]
+build-command = ["build"]
+run-command = ["qemu-system-x86_64", "-drive", "format=raw,file={}"]
+
+[[test]]
+name = "test"
+harness = false
+path = "testes/test.rs"

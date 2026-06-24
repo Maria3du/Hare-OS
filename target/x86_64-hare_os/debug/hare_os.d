@@ -1,1 +1,0 @@
-C:\Users\Cliente\Documents\programação\hare_os\target\x86_64-hare_os\debug\hare_os: C:\Users\Cliente\Documents\programação\hare_os\src\main.rs C:\Users\Cliente\Documents\programação\hare_os\src\vgabuffer.rs
