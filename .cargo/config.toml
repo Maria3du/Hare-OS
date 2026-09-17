@@ -1,8 +1,0 @@
-[unstable]
-json-target-spec = true
-
-[build]
-target = "x86_64-hare_os.json"
-
-[target.x86_64-hare_os]
-runner = "qemu-system-x86_64 -drive format=raw,file={}"
